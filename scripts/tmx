@@ -1,0 +1,25 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+export LANG=C.UTF-8; export LC_ALL=C.UTF-8
+
+MSG="${1:-}"
+TODO="${2:-}"
+BLOCKERS="${3:-}"
+TS="$(date -Iseconds)"
+[ -n "$MSG" ] || { echo "Usage: ./scripts/tmx \"מה בוצע\" \"TODO(optional)\" \"חסמים(optional)\""; exit 2; }
+
+SNAP="$(./scripts/snapshot.sh)"
+
+{
+  echo "### [$TS]"
+  echo "- מה בוצע: $MSG"
+  [ -n "$TODO" ] && echo "- מה נשאר: $TODO"
+  [ -n "$BLOCKERS" ] && echo "- חסמים: $BLOCKERS"
+  echo "- Snapshot: $SNAP"
+  echo
+} >> LOG.md
+
+perl -0777 -i -pe "s/^עודכן לאחרונה:.*$/עודכן לאחרונה: $TS/m" RULES.md 2>/dev/null || true
+
+./scripts/sync.sh "tmx: $TS"
+echo "✅ tmx done ($TS)"
