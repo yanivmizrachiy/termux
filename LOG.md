@@ -16,3 +16,8 @@
 - חסמים: חסמים
 - Snapshot: snapshots/snapshot_2026-02-13T16-59-52+02-00.txt
 
+### [2026-02-13T17:03:00+02:00]
+- מה בוצע: בדיקת alias עובד
+- מה נשאר: אין
+- Snapshot: snapshots/snapshot_2026-02-13T17-03-00+02-00.txt
+
