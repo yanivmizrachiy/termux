@@ -11,7 +11,15 @@ else
   git commit -m "$MSG" || true
 fi
 
-git fetch origin
+git fetch origin >/dev/null 2>&1 || true
+
+# If origin/main does not exist yet (empty remote), do first push without rebase
+if ! git show-ref --verify --quiet refs/remotes/origin/main; then
+  git push -u origin main
+  echo "✅ pushed safely (first upstream created)"
+  exit 0
+fi
+
 git rebase --autostash origin/main || { echo "❌ rebase conflict"; git status -sb; exit 3; }
 git push origin main
 echo "✅ pushed safely"
