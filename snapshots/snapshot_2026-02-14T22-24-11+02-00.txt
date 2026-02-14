@@ -1,0 +1,45 @@
+TIME: 2026-02-14T22:24:11+02:00
+
+=== TERMUX-INFO (first 120 lines) ===
+Termux Variables:
+TERMUX_EXEC__PROC_SELF_EXE=/data/data/com.termux/files/usr/bin/termux-info
+TERMUX_VERSION=googleplay.2026.01.07
+TERMUX__USER_ID=0
+Packages CPU architecture:
+aarch64
+Subscribed repositories:
+URIs: https://packages.termux.dev/apt/termux-main
+Updatable packages:
+ffmpeg/stable 8.0.1-5 aarch64 [upgradable from: 8.0.1-4]
+glib/stable 2.86.4 aarch64 [upgradable from: 2.86.3-1]
+libplacebo/stable 7.360.0 aarch64 [upgradable from: 7.351.0]
+librsvg/stable 2.61.4 aarch64 [upgradable from: 2.61.3]
+mesa-vulkan-icd-swrast/stable 26.0.0 aarch64 [upgradable from: 25.3.5]
+rust-std-aarch64-linux-android/stable 1.93.1 aarch64 [upgradable from: 1.93.0]
+rust/stable 1.93.1 aarch64 [upgradable from: 1.93.0]
+termux-tools version:
+3.0.9
+Android version:
+16
+Kernel build information:
+Linux localhost 6.1.128-android14-11-31999054-abS928BXXS4CZA1 #1 SMP PREEMPT Fri Jan  2 05:09:34 UTC 2026 aarch64 Android
+Device manufacturer:
+samsung
+Device model:
+SM-S928B
+LD Variables:
+LD_LIBRARY_PATH=
+LD_PRELOAD=/data/data/com.termux/files/usr/lib/libtermux-exec.so
+
+=== VERSIONS ===
+git version 2.53.0
+v25.3.0
+Python 3.12.12
+OpenSSH_10.2p1, OpenSSL 3.6.1 27 Jan 2026
+
+=== REPO STATUS ===
+## main...origin/main [ahead 1]
+?? snapshots/snapshot_2026-02-14T22-24-11+02-00.txt
+
+=== NETWORK (github head) ===
+HTTP/2 200 
